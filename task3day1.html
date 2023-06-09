@@ -1,33 +1,120 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <style>
+      .container {
+  padding: 16px;
+  background-color: rgb(238, 222, 222);
+  margin-left: 0px;
+  margin-right: 70px;
+  margin-bottom: 70px;
+}
+      body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:paleturquoise;
+  margin-left: 100px;
+}
+.ips{
+  width: 130px;
+  height: 30px;
+  background-color: #13a6d3;
+  outline: none;
+  margin-left: 300px;
+}
+.ip1{
+  width: 100%;
+  margin: 5px 0 22px 0;
+   background-color: #64ecb4;
+  outline: none;
+}
+.ip2{
+  width: 100%;
+  margin: 5px 0 22px 0;
+   background-color: #64ecb4;
+  outline: none;
+}
+.ip3{
+  width: 100%;
+  margin: 5px 0 22px 0;
+   background-color: #64ecb4;
+  outline: none;
+}
+.ip4{
+  width: 100%;
+  margin: 5px 0 22px 0;
+   background-color: #64ecb4;
+  outline: none;
+}
+.ip5{
+  width: 100%;
+  margin: 5px 0 22px 0;
+   background-color: #64ecb4;
+  outline: none;
+}
+.ip6{
+  width: 100%;
+  margin: 5px 0 22px 0;
+   background-color: #64ecb4;
+  outline: none;
+}
+.ip7{
+  width: 100%;
+  margin: 5px 0 22px 0;
+   background-color: #64ecb4;
+  outline: none;
+}
+.ip9{
+  width: 100%;
+  margin: 5px 0 22px 0;
+   background-color: #64ecb4;
+  outline: none;
+}
+.ip10{
+  width: 100%;
+  margin: 5px 0 22px 0;
+   background-color: #64ecb4;
+  outline: none;
+}
+.ip11{
+  width: 100%;
+  margin: 5px 0 22px 0;
+   background-color: #64ecb4;
+  outline: none;
+}
+    </style>
+  </head>
 <body>
 
 <h2>REGISTRATION FORM</h2>
 
 
 <form>
-  <label for="fname">FirstName:</label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <label for="lname">LastName:</label>
-  <input type="text" id="lname" name="lname"><br><br>
-  <label for="birthday">Birthday:</label>
-  <input type="date" id="birthday" name="birthday"><br><br>
+  <div class="container">
+    <h1>Register</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+  <label for="fname">First Name</label>
+  <input type="text" id="fname" name="fname"class="ip1"><br><br>
+  <label for="lname">Last Name</label>
+  <input type="text" id="lname" name="lname"class="ip2"><br><br>
+  <label for="birthday">Date of Birth</label>
+  <input type="date" id="birthday" name="birthday"class="ip3"><br><br>
  
-  <label for="ages">Age:</label>
-  <input type="text" id="ages" name="ages"><br><br>
-  <label for="gender">Gender:</label>
+  <label for="ages">Age</label>
+  <input type="text" id="ages" name="ages"class="ip4"><br><br>
+  <label for="gender">Gender</label>
   ​<input type="radio" id="male" name="gender" value="MALE">
   <label for="male">Male</label>
   <input type="radio" id="css" name="gender" value="FEMALE">
   <label for="female">Female</label><br><br>
-  <label for="phone">Phone number:</label>
-  <input type="tel" id="phone" name="phone" placeholder="123-45-678"><br><br>
-  <label for="email">Enter your email:</label>
-  <input type="email" id="email" name="email"><br><br>
+  <label for="phone">Phone number</label>
+  <input type="tel" id="phone" name="phone" placeholder="123-45-678"class="ip4"><br><br>
+  <label for="email">Enter your email</label>
+  <input type="email" id="email" name="email"class="ip5"><br><br>
   <label for="address">Address</label>
-  <input type="text" id="add" name="add"><br><br>
+  <input type="text" id="add" name="add"class="ip6"><br><br>
   <label for="states">State:</label>
-  <select name="states" id="states">
+  <select name="states" id="states"class="ip7">
     <option value="kerala">Kerala</option>
     <option value="tamilnadu">Tamilnadu</option>
     <option value="karnadaka">karnadaka</option>
@@ -37,13 +124,14 @@
             <option value="kerala">Kerala</option>
             </select><br<br>
             <label for="uname">User Name:</label>
-            <input type="uname" id="uname" name="uname" placeholder="User Name"><br><br>
+            <input type="uname" id="uname" name="uname" placeholder="User Name"class="ip9"><br><br>
             <label for="password">Password</label>
-    <input type="password" id="pwd" name="pwd"placeholder="Password"><br><br>
+    <input type="password" id="pwd" name="pwd"placeholder="Password"class="ip10"><br><br>
     <label for="cpass">Confirm Password</label>
-    <input type="cpass" id="pwd" name="pwd"placeholder=" Confirm Password"><br><br>
+    <input type="cpass" id="pwd" name="pwd"placeholder=" Confirm Password"class="ip11"><br><br>
 
-  <input type="submit" value="Submit">
+  <input type="submit" value="Submit"class="ips"><input type="submit" value="Cancel"class="ips">
+          </div>
 </form>
 
 

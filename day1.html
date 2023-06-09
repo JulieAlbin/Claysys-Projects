@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
+          body{
+            background-color: aqua;
+          }
+          
         .myDiv {
-            
+          
+            border-radius: 25px;
             background-color: hsl(266, 40%, 52%);    
             text-align: center;
-            width: 390px;
+            width: 290px;
             height: 50px;
+            background-image: linear-gradient(to right,rgb(31, 47, 192) ,purple);
         
           }
           .button {
-  background-color:violet;}
+            width: 250px;
+            height: 50px;
+            background-image: linear-gradient(to right,rgb(31, 47, 192) ,purple);
+  border-radius: 25px;
+color: white;}
+.id1{
+  border-radius: 25px;
+}
+
           </style>
     </head>
 <body>
-<div style="height: 300px;width: 400px;background-color:aliceblue;">
-    <div style="height:290px;width:390px;background-color:white;">
+<div style="height: 400px;width: 300px;background-color:rgb(158, 184, 206);margin: auto;">
+    <div style="height:390px;width:290px;background-color:white;margin: 5px;margin-top: 10px;border-radius: 25px;">
     <div class="myDiv">
         <h2 style="color:white;">Login Form</h2>
         
@@ -26,13 +41,14 @@
 
 <form  style="text-align:center;">
     
-    <input type="email" id="email" name="email" placeholder="Email Addess"><br><br>
+    <input type="email" id="email" name="email" placeholder="Email Addess"class="id1"><br><br>
     
-    <input type="password" id="pwd" name="pwd"placeholder="Password"><br>
+    <input type="password" id="pwd" name="pwd"placeholder="Password"class="id1"><br><br>
     ​<input type="checkbox" id="checked" name="check" value="check">
-  <label for="check"> Remember me  Forgot Password?</label> <br>
+  <label for="check"> Remember me </label>  <label for="forgot-password" class="col-6"></label>
+    <a href="forgot.html" class="ml-6">Forgot Password?</a><br><br>
   ​<button class="button">Login</button><br><br>
-  <p>Not a member sign up now</p>
+  <label for="Not a member" class="col-6">Not a member</label>  <a href="Sign up.html" class="ml-6">sign up now</a><br><br>
  
 </form> 
 
