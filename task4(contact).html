@@ -3,23 +3,65 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
+          h1{
+margin-left: 500px;
+color: blue;
+          }
+          h3{
+            margin-left: 180px;
+          }
           body{
             background-color: aqua;
           } 
           .foot{
-  margin-left: 600px;
+  margin-left: 700px;
 } 
+h2{
+  margin-left: 160px;
+}
+#demo{
+  color: crimson;
+}
+
         </style>
-        <title>CONTACT US</title>
+       
+      
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 <body>
-    <h1><b><u>Contact Us</u></b></h1>
+  
+  <script>
+    function myFunction() {
+    alert("Input name field lost focus.");
+}
+function myClick()
+ {
+  document.getElementsById("demo").innerHTML = "Hello World";
+  
+}
+
+  </script>
+  <h1 ><i><b></b>Get in Touch</b></i></h1>
+  <div style="width: 400px;height: 400px;background-color:rosybrown;margin: auto;">
+
+    <label for="Name"> Name</label>
+    <input type="text" id="name" name="Name" onfocusout="myFunction()"><br><br>
+    <label for="email"> Email</label>
+    <input type="email" id="eemail" name="email"><br><br>
+    <textarea class="textinput input-element" placeholder="Message"></textarea>
+    <p id="demo"></p>
+    <button id="demo" onclick="myClick()">Send</button>
+
+    <br><br>
+    <h3>OR</h3>
+    <h2><b><u>Contact Us</u></b></h2>
     
   <ul><li> <i class="material-icons">&#xe0be;</i><a href = "mailto: abc@example.com">ggfjghgh@gmail.com</a><br><br>
     
-  <li>  <i style="font-size:24px" class="fa">&#xf095;</i><p><b>Phone: 5566562124</b></p></li></ul><br><br<br><br><br><br<br><br>
+  <li>  <i style="font-size:24px" class="fa">&#xf095;</i><p><b>Phone: 5566562124</b></p></li></ul>
+  </div>
+    <br><br<br><br><br><br<br><br>
   <br><br<br><br><br><br<br><br><br><br<br><br><br><br<br><br>
   <footer class="foot">
         

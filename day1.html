@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+      
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
           body{
@@ -30,6 +31,22 @@ color: white;}
           </style>
     </head>
 <body>
+ 
+
+<script>
+/*function focusFunction() {
+  document.getElementById("email").style.background = "red";
+}
+
+function blurFunction() {
+  document.getElementById("email").style.background = "lightgreen";
+}*/
+function myFunction() {
+    alert("Input field lost focus.");
+}
+
+
+</script>
 <div style="height: 400px;width: 300px;background-color:rgb(158, 184, 206);margin: auto;">
     <div style="height:390px;width:290px;background-color:white;margin: 5px;margin-top: 10px;border-radius: 25px;">
     <div class="myDiv">
@@ -40,8 +57,9 @@ color: white;}
       
 
 <form  style="text-align:center;">
-    
-    <input type="email" id="email" name="email" placeholder="Email Addess"class="id1"><br><br>
+  
+
+    <input type="email" id="email" name="email" placeholder="Email Addess"class="id1"​ onfocusout="myFunction()"><br><br>
     
     <input type="password" id="pwd" name="pwd"placeholder="Password"class="id1"><br><br>
     ​<input type="checkbox" id="checked" name="check" value="check">
