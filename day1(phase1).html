@@ -12,79 +12,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<style>
-      
 
-.mySlides {display:none;
+<style>
+ .table{color:black;
+  background-color: wheat;
+  margin-left: 0%;
+}  
+
+
+.mySlides {
+  display:none;
   margin: auto;
 }
-.foot{
-  margin-left: 600px;
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color:wheat;
+   color: black;
+   text-align: center;
 }
 body{
-  background-color: aqua;
+  background-color:lightsteelblue;
 }
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: darkred;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  font-size: 50px;
+}
+
 </style>
     <link rel="stylesheet" href="/w3css/3/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
 </head>
  
 <body>
-    
-        <table style="width:80%">
+    <div class="table">
+        <table style="width:80%" class="table" >
             <tr>
-              <th>Logo</th>
+              <th><img  src="C:\Users\JULIE JAIN\Desktop\Clasys Training first\Images\nature.jpg" width="60px" height="60px"></th>
               <th><a href="task4(about).html">About us</a></th>
-              <th><a href="day1.html">Sign In</a></th>
-              <th><a href="task3day1.html">Sign Up</a></th>
-              <th><a href="task4(contact).html">Contact Us</a></th>
+              <th><a href="day1.html">Sign in</a></th>
+              <th><a href="task3day1.html">Sign up</a></th>
+              <th><a href="task4(contact).html">Contact us</a></th>
+              <th></th>
             </tr>
-    </table>
-    <h2 class="w3-center">-----Wonderful Nature-----</h2>
+    </table></div>
+    <h2 class="w3-center"></h2>
 
-<div class="w3-content w3-section" style="max-width:500px">
-  <img class="mySlides" src="C:\Users\JULIE JAIN\Desktop\Clasys Training first\Images\img1.jpg" style="width:100%";>
-  <img class="mySlides" src="C:\Users\JULIE JAIN\Desktop\Clasys Training first\Images\img2.jpg" style="width:100%";>
-  <img class="mySlides" src="C:\Users\JULIE JAIN\Desktop\Clasys Training first\Images\img3.jpg" style="width:100%";>
-  <img class="mySlides" src="C:\Users\JULIE JAIN\Desktop\Clasys Training first\Images\img4.jpg" style="width:100%";>
-  <img class="mySlides" src="C:\Users\JULIE JAIN\Desktop\Clasys Training first\Images\img5.jpg" style="width:100%";>
+<div class="w3-content w3-section" style="max-width:1500px">
+  
+  <img class="mySlides" src="C:\Users\JULIE JAIN\Desktop\Clasys Training first\Images\img1.jpg" style="width:100%">
+  <div class="centered">WELCOME NATURE </div>
+  <img class="mySlides" src="C:\Users\JULIE JAIN\Desktop\Clasys Training first\Images\img2.jpg" style="width:100%">
+  <img class="mySlides" src="C:\Users\JULIE JAIN\Desktop\Clasys Training first\Images\img3.jpg" style="width:100%">
+  <img class="mySlides" src="C:\Users\JULIE JAIN\Desktop\Clasys Training first\Images\img4.jpg" style="width:100%">
+  <img class="mySlides" src="C:\Users\JULIE JAIN\Desktop\Clasys Training first\Images\img5.jpg" style="width:100%">
 </div>
-<script>
-var myIndex = 0;
-carousel();
+<script src="Slideshow.js">
 
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 2000); // Change image every 2 seconds
-}
+
 </script><br><br>
-<!--
-<h2>Demo External JavaScript</h2>
-
-<p id="demo">A Paragraph.</p>
-
-<button type="button" onclick="myFunction()">Try it</button>
-
-<p>This example links to "myScript.js".</p>
-<p>(myFunction is stored in "myScript.js")</p>
-
-<script src="myScript.js"></script>-->
-
-      <footer class="foot">
-        
-  <a href="#"><i class="fa fa-pinterest-p"></i></a>
+<div class="footer">
+  <a href="#"text-align=><i class="fa fa-pinterest-p"></i></a>
   <a href="#"><i class="fa fa-twitter"></i></a>
   <a href="#"><i class="fa fa-flickr"></i></a>
   <a href="#"><i class="fa fa-linkedin"></i></a>
-  <p class="w3-medium">
-  Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">nature.css</a>
-      </footer>
+<p class="w3-medium">
+Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">nature.css</a>
+   
+ </div>
         </body>
         </html>

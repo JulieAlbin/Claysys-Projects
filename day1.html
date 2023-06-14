@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-      
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
+          .table{color:black;
+  background-color:beige;
+  margin-left: 0%;
+}     
           body{
-            background-color: aqua;
+            background-color:lightsteelblue;
           }
           
         .myDiv {
@@ -27,6 +36,25 @@ color: white;}
 .id1{
   border-radius: 25px;
 }
+.table{color:black;
+  background-color:wheat;
+}  
+
+​ .foot{
+  margin: left 0px;;
+  background-color:wheat;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color:wheat;
+   color: black;
+   text-align: center;
+}
 
           </style>
     </head>
@@ -34,19 +62,38 @@ color: white;}
  
 
 <script>
-/*function focusFunction() {
-  document.getElementById("email").style.background = "red";
-}
 
-function blurFunction() {
-  document.getElementById("email").style.background = "lightgreen";
-}*/
 function myFunction() {
     alert("Input field lost focus.");
 }
 
+function InvalidMsg(textbox) {
+  
+  if (textbox.value === '') {
+      textbox.setCustomValidity
+            ('Entering an email-id is necessary!');
+  } else if (textbox.validity.typeMismatch) {
+      textbox.setCustomValidity
+            ('Please enter an email address which is valid!');
+  } else {
+      textbox.setCustomValidity('');
+  }
+
+  return true;
+}
 
 </script>
+<div class="table">
+  <table style="width:80%">
+      <tr>
+        <th><img  src="C:\Users\JULIE JAIN\Desktop\Clasys Training first\Images\nature.jpg" width="60px" height="60px"></th>
+        <th><a href="task4(about).html">About us</a></th>
+        <th><a href="day1.html">Sign in</a></th>
+        <th><a href="task3day1.html">Sign up</a></th>
+        <th><a href="task4(contact).html">Contact us</a></th>
+      
+      </tr>
+</table></div>
 <div style="height: 400px;width: 300px;background-color:rgb(158, 184, 206);margin: auto;">
     <div style="height:390px;width:290px;background-color:white;margin: 5px;margin-top: 10px;border-radius: 25px;">
     <div class="myDiv">
@@ -59,8 +106,13 @@ function myFunction() {
 <form  style="text-align:center;">
   
 
-    <input type="email" id="email" name="email" placeholder="Email Addess"class="id1"​ onfocusout="myFunction()"><br><br>
+   <!-- <input type="email" id="email" name="email" placeholder="Email Addess"class="id1"​ 
+    onfocusout="myFunction()"required><br><br>-->
     
+            <input id="email" oninvalid="InvalidMsg(this);" 
+                   oninput="InvalidMsg(this);" name="email" placeholder="Username or Email"
+                   type="email" required="required" class="id1"/><br><br>
+                   
     <input type="password" id="pwd" name="pwd"placeholder="Password"class="id1"><br><br>
     ​<input type="checkbox" id="checked" name="check" value="check">
   <label for="check"> Remember me </label>  <label for="forgot-password" class="col-6"></label>
@@ -69,7 +121,15 @@ function myFunction() {
   <label for="Not a member" class="col-6">Not a member</label>  <a href="Sign up.html" class="ml-6">sign up now</a><br><br>
  
 </form> 
-
+<div class="footer">
+  <a href="#"text-align=><i class="fa fa-pinterest-p"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-flickr"></i></a>
+  <a href="#"><i class="fa fa-linkedin"></i></a>
+<p class="w3-medium">
+Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">nature.css</a>
+   
+ </div>
 </div>
 </div>
 </body>
