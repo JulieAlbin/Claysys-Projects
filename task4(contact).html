@@ -72,27 +72,39 @@ h2{
         </tr>
 </table></div>
   <script>
-    function myFunction() {
+  function myFunction() {
     alert("Input name field lost focus.");
 }
+
 function myClick()
  {
   document.getElementsById("demo").innerHTML = "Hello World";
   
 }
+function InvalidMsg(textbox) {
+  
+  if (textbox.value === '') {
+      textbox.setCustomValidity
+            ('Entering an email-id is necessary!');
+  } else if (textbox.validity.typeMismatch) {
+      textbox.setCustomValidity
+            ('Please enter an email address which is valid!');
+  } else {
+      textbox.setCustomValidity('');
+  }
 
+  return true;
+}
   </script>
   <h1><i><b></b>Get in Touch</b></i></h1>
   <div style="width: 400px;height: 400px;background-color:rosybrown;margin: auto;">
-
-    <label for="Name"> Name</label>
-    <input type="text" id="name" name="Name" onfocusout="myFunction()"required placeholder="Email"><br><br>
-    <!--<label for="email"> Email</label>
-    <input type="email" id="eemail" name="email"><br><br>
-    <textarea class="textinput input-element" placeholder="Message"></textarea>-->
+    <input type="text" id="name" name="Name" onfocusout="myFunction()" 
+    placeholder="Enter your Name"required="required"><br><br>
     <input id="email" oninvalid="InvalidMsg(this);" 
                    oninput="InvalidMsg(this);" name="email" placeholder="Username or Email"
-                   type="email" required="required" class="id1"><br><br>
+                   type="email" required="required"><br><br>
+    <textarea class="textinput input-element" placeholder="Message"required></textarea>
+    
     <p id="demo"></p>
     <button id="demo" onclick="myClick()">Send</button>
     <h2><b><u>Contact Us</u></b></h2>

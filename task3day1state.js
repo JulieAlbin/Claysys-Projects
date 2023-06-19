@@ -1,6 +1,22 @@
+// age calculation
+
+var dobInput = document.getElementById('dob');
+var ageInput = document.getElementById('age');
+
+dobInput.addEventListener('change', function() {
+  var dob = new Date(dobInput.value);
+  var today = new Date();
+  var age = today.getFullYear() - dob.getFullYear();
+
+  if (today.getMonth() < dob.getMonth() || (today.getMonth() === dob.getMonth() && today.getDate() < dob.getDate())) {
+    age--;
+  }
+  
+  ageInput.value = age;
+});
 
       
-    function calculateAge() {
+    /*function calculateAge() {
         var dob = document.getElementById("dob").value;
         var today = new Date();
         var birthDate = new Date(dob);
@@ -15,7 +31,7 @@
     }
 
     // Attach the calculateAge function to the "change" event of the date input
-    document.getElementById("dob").addEventListener("change", calculateAge);
+    document.getElementById("dob").addEventListener("change", calculateAge);*/
 function populateCities() {
     var stateDropdown = document.getElementById("state");
     var cityDropdown = document.getElementById("city");
