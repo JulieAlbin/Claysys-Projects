@@ -2,17 +2,22 @@
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data;
+//using System.Text.RegularExpressions;
+
 
 namespace CRUDRegform
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
         }
         SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-OQUGI44U\SQLEXPRESS;Initial Catalog=Nature;Integrated Security=True");
         public int EmpID;
+       // public object Regex { get; private set; }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -27,7 +32,7 @@ namespace CRUDRegform
         private void RegistrationRecord()
         {
             
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Registration9", con);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Registration12", con);
             DataTable dt = new DataTable();
             con.Open();
             SqlDataReader sdr = cmd.ExecuteReader();
@@ -86,7 +91,7 @@ namespace CRUDRegform
         {
             if (IsValid())
                 {
-                SqlCommand cmd = new SqlCommand("INSERT INTO Registration9 VALUES (@FirstName,@LastName,@age,@Email,@Address,@City,@State,@Username,@Password)", con);
+                SqlCommand cmd = new SqlCommand("INSERT INTO Registration12 VALUES (@FirstName,@LastName,@age,@Email,@Address,@City,@State,@Username,@Password)", con);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.AddWithValue("@FirstName",textBox1.Text);
                 cmd.Parameters.AddWithValue("@LastName",textBox2.Text);
@@ -108,12 +113,70 @@ namespace CRUDRegform
 
         private bool IsValid()
         {
+
             if (textBox1.Text == String.Empty)
             {
                 MessageBox.Show("Name is required", "failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
+            }
+            else if (textBox2.Text == string.Empty)
+            {
+                MessageBox.Show("Last name is required", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
 
             }
+
+            else if (textBox3.Text == string.Empty)
+            {
+                MessageBox.Show("Age is required", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+
+            }
+            else if (textBox4.Text == string.Empty)
+            {
+                MessageBox.Show("Email is required", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+
+            }
+
+           // else if (!Regex.IsMatch(textBox4.Text, @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$")) 
+           // {
+              //  MessageBox.Show("Please enter a valid email address", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               // return false;
+          //  }
+
+            else if (textBox5.Text == string.Empty)
+            {
+                MessageBox.Show("Address is required", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+
+            }
+            else if (textBox6.Text == string.Empty)
+            {
+                MessageBox.Show("City is required", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (textBox7.Text == string.Empty)
+            {
+                MessageBox.Show("State is required", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+
+            }
+            else if (textBox8.Text == string.Empty)
+            {
+                MessageBox.Show("Username is required", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+
+            }
+            else if (textBox9.Text == string.Empty)
+            {
+                MessageBox.Show("Password is required", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+
+            }
+            
+
+        
             return true;
         }
 
@@ -124,6 +187,7 @@ namespace CRUDRegform
 
         private void ResetFormControls()
         {
+            EmpID = 0;
             textBox1.Clear();
             textBox2.Clear();
             textBox3.Clear();
@@ -155,7 +219,7 @@ namespace CRUDRegform
         {
             if (EmpID > 0)
             {
-                SqlCommand cmd = new SqlCommand("UPDATE Registration9 SET FirstName=@FirstName,LastName=@LastName,age=@age,Email=@Email,Address=@Address,City=@City,State=@State,Username=@Username,Password=@Password WHERE EmpID=@id", con);
+                SqlCommand cmd = new SqlCommand("UPDATE Registration12 SET FirstName=@FirstName,LastName=@LastName,age=@age,Email=@Email,Address=@Address,City=@City,State=@State,Username=@Username,Password=@Password WHERE EmpID=@id", con);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.AddWithValue("@FirstName", textBox1.Text);
                 cmd.Parameters.AddWithValue("@LastName", textBox2.Text);
@@ -180,6 +244,29 @@ namespace CRUDRegform
 
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (EmpID > 0)
+            {
+                SqlCommand cmd = new SqlCommand("DELETE FROM Registration12 WHERE EmpID=@id", con);
+                cmd.CommandType = CommandType.Text;
+
+                cmd.Parameters.AddWithValue("@id", this.EmpID);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Deleted successfully", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                RegistrationRecord();
+                ResetFormControls();
+            }
+            else
+            {
+                MessageBox.Show("Please selete the id tobe deleted", "Select?", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
     }
     }
+    
 
