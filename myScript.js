@@ -3,5 +3,5 @@ function mouseDown() {
   }
   
   function mouseUp() {
-    document.getElementById("myP").style.color = "blue";
+    document.getElementById("myP").style.color = "green";
   }

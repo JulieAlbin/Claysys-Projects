@@ -1,22 +1,29 @@
-// age calculation
 
-var dobInput = document.getElementById('dob');
-var ageInput = document.getElementById('age');
-
-dobInput.addEventListener('change', function() {
-  var dob = new Date(dobInput.value);
-  var today = new Date();
-  var age = today.getFullYear() - dob.getFullYear();
-
-  if (today.getMonth() < dob.getMonth() || (today.getMonth() === dob.getMonth() && today.getDate() < dob.getDate())) {
-    age--;
-  }
+function calculateAge() {
+    var dobInput = document.getElementById("dob");
+    var dob = new Date(dobInput.value);
+    var today = new Date();
+    var age = today.getFullYear() - dob.getFullYear();
   
-  ageInput.value = age;
-});
-
-      
-    /*function calculateAge() {
+    // Check if the selected date is after the current date
+    if (dob > today) {
+      alert("Please select a date before the current date.");
+      dobInput.value = ""; // Clear the input field
+      return;
+    }
+  
+    // Check if the birthday has occurred this year
+    if (
+      today.getMonth() < dob.getMonth() ||
+      (today.getMonth() === dob.getMonth() && today.getDate() < dob.getDate())
+    ) {
+      age--;
+    }
+  
+    var ageInput = document.getElementById("age");
+    ageInput.value = age;
+  }
+/*function calculateAge() {
         var dob = document.getElementById("dob").value;
         var today = new Date();
         var birthDate = new Date(dob);
@@ -28,10 +35,10 @@ dobInput.addEventListener('change', function() {
         }
         
         document.getElementById("age").value = age;
-    }
-
-    // Attach the calculateAge function to the "change" event of the date input
+          }
+    
     document.getElementById("dob").addEventListener("change", calculateAge);*/
+
 function populateCities() {
     var stateDropdown = document.getElementById("state");
     var cityDropdown = document.getElementById("city");

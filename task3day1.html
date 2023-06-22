@@ -41,27 +41,26 @@
       document.getElementById("message1").innerHTML = "**Password length must not exceed 15 characters";  
       return false;  
     }  
-    
-          
-   if(pw1 != pw2) {  
-      document.getElementById("message2").innerHTML = "**Passwords are not same";  
-      return false;  
-    } 
-    else {  
-      alert ("Your password created successfully");  
-      document.write("JavaScript form has been submitted successfully");  
-    } 
-  }
+    }
    
-    
+  function matchPassword() {  
+  var pw1 = document.getElementById("pswd1");  
+  var pw2 = document.getElementById("pswd2");  
+  if(pw1 != pw2)  
+  {   
+    document.getElementById("message3").innerHTML = "**Password did not match";  
+  } else {  
+    document.getElementById("message3").innerHTML = "**Password created successfully";  
+  }  
+}  
     function myFunction() {
-    alert("Input name field lost focus.");
+   document.getElementById("message4").innerHTML = "**Out from firstname";
+   document.getElementById("message5").innerHTML = "**Out from lastname";
 }
-function myClick()
+/*function myClick()
  {
   document.getElementsById("demo").innerHTML = "Hello World";
-  
-}
+}*/
 
   </script>
       
@@ -69,7 +68,12 @@ function myClick()
 .table{color:black;
     background-color: wheat;
     margin-left:0px;
-  }  
+  }
+  .h2{
+    font-weight: 200px;
+    color: blue;
+  }
+  
     </style>
     </head>
     <body>
@@ -87,20 +91,19 @@ function myClick()
     </table></div>
     
       <form onSubmit="return validateForm()">
-    <h2>Please fill in this form to create an account.</h2>
+    <h2 class="h2">Please fill in this form to create an account.</h2>
     <hr>
-    <div style="width:600px; float:left; height:400px; background:rosybrown;margin-bottom: 0%";>
+    <div style="width:600px; float:left; height:400px; background:cornflowerblue;margin-bottom: 0%";>
 
     
   <input type="text" id="firstName" name="firstName"placeholder="Firstname"class="ip1"required>
+  <span id = "message4" style="color:red"> </span>
   
-  <input type="text" id="lastName" name="lastName"placeholder="LastName"class="ip2" onfocusout="myFunction()" >
-  
-  
-  <input type="date" id="dob" name="dob"placeholder="Date"class="ip3"required>
- 
-  
-  <input type="number" id="age" name="age"placeholder="Age"class="ip4" readonly>
+  <input type="text" id="lastName" name="lastName"placeholder="LastName"class="ip2" onfocusout="myFunction()">
+  <span id = "message5" style="color:red"> </span>
+  <input type="date" name="dob"id="dob"onchange="calculateAge()"max="2023-06-19"placeholder="Date"class="ip3"required>
+  <input type="number" id="age" name="age"placeholder="Age"class="ip4"required>
+  <span></span>
   <label for="gender">Gender</label>
   <input type="radio" id="male" name="gender" placeholder="Gender"value="MALE">
 <label for="male">Male</label>
@@ -110,9 +113,10 @@ function myClick()
   <input type="tel" id="phone" name="phone" placeholder="Enter phone number eg:123-45-678"class="ip4">
   
   <input type="email" id="email" name="email"placeholder="Email"class="ip5"required>
-  
+  <button type="submit" id="btn"onclick="matchPassword()"class="button">SUBMIT</button>
+  <span id = "message3" style="color:red"> </span>
     </div>
-    <div style="width: 600px; float:right; height:400px; background:rosybrown";>
+    <div style="width: 600px; float:right; height:400px;background-color:cornflowerblue;";>
   
     
   <input type="text" id="add" name="add"placeholder="Address"class="ip6">
@@ -167,26 +171,19 @@ function myClick()
       
         <input type = text name = name placeholder="Username"size = 25 required class="ip7">
         
-        <td> Create Password* </td>  
-<input type = "password" id = "pswd1" value = ""width:580px>   
+        <td></td>  
+<input type = "password" id = "pswd1" value = ""placeholder="Password"class="ip4">   
 <span id = "message1" style="color:red"> </span> <br><br>  
   
 <!--?Enter confirm password -->  
-<td> Confirm Password* </td>  
-<input type = "password" id = "pswd2" value = "">   
+<td></td>  
+<input type = "password" id = "pswd2" value = ""placeholder="confirm password"class="ip4">   
 <span id = "message2" style="color:red"> </span> <br><br>  
-  
-<!-- Click to verify valid password -->  
-<!--<input type = "submit" value = "Submit">  -->
-<button type="submit" class="btn">SUBMIT</button>
+
 <!-- Click to reset fields -->  
-<button type = "reset" value = "Reset" >RESET</button>
+<button type = "reset" value = "Reset"class="button">RESET</button>
 </form>  
-       <!-- <input type = password name = password1 placeholder="Password1"size = 25 required class="ip7">
-        <input type = password name = password2 placeholder="Password2"size = 25 required class="ip7">
-        <input type = submit value ="Submit"class="ip12">-->
-  
-</div>
+  </div>
   <div class="footer">
     <a href="#"text-align=><i class="fa fa-pinterest-p"></i></a>
     <a href="#"><i class="fa fa-twitter"></i></a>

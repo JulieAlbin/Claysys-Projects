@@ -13,20 +13,21 @@
   
         <style>
           h1{
-margin-left: 600px;
-color:red;
+margin-left: 500px;
+color:navy;
+font-weight: 300px;
           }
           h3{
             margin-left: 180px;
           }
           body{
-            background-color:lightsteelblue;
+            background-color:cornflowerblue;
           } 
           .foot{
   margin-left: 700px;
 } 
 h2{
-  margin-left: 120px;
+  margin-left:50px;
 }
 #demo{
   color: crimson;
@@ -51,6 +52,11 @@ h2{
    color: black;
    text-align: center;
 }
+.button
+{
+  border-radius:  25px; 
+  background-color: blue;
+}
 
         </style>
        
@@ -71,42 +77,28 @@ h2{
         
         </tr>
 </table></div>
-  <script>
-  function myFunction() {
-    alert("Input name field lost focus.");
-}
-
-function myClick()
- {
-  document.getElementsById("demo").innerHTML = "Hello World";
-  
-}
-function InvalidMsg(textbox) {
-  
-  if (textbox.value === '') {
-      textbox.setCustomValidity
-            ('Entering an email-id is necessary!');
-  } else if (textbox.validity.typeMismatch) {
-      textbox.setCustomValidity
-            ('Please enter an email address which is valid!');
-  } else {
-      textbox.setCustomValidity('');
-  }
-
-  return true;
+<script>
+function myFunction() {
+   document.getElementById("message2").innerHTML = "**Out from name";
 }
   </script>
   <h1><i><b></b>Get in Touch</b></i></h1>
-  <div style="width: 400px;height: 400px;background-color:rosybrown;margin: auto;">
-    <input type="text" id="name" name="Name" onfocusout="myFunction()" 
-    placeholder="Enter your Name"required="required"><br><br>
+  <div style="width: 400px;height: 400px;background-color:cornflowerblue;margin: auto;">
+
+    <input type="text" id="username" name="username" onfocusout="myFunction()"
+    placeholder="Enter your Name"required="required" autocomplete="off";><br><br>
+
+
+   <span id = "message2" style="color:red"> </span>
+
     <input id="email" oninvalid="InvalidMsg(this);" 
                    oninput="InvalidMsg(this);" name="email" placeholder="Username or Email"
                    type="email" required="required"><br><br>
     <textarea class="textinput input-element" placeholder="Message"required></textarea>
     
     <p id="demo"></p>
-    <button id="demo" onclick="myClick()">Send</button>
+    <button class="button">SEND</button>
+
     <h2><b><u>Contact Us</u></b></h2>
     
   <ul><li> <i class="material-icons">&#xe0be;</i><a href = "mailto: abc@example.com">ggfjghgh@gmail.com</a>
@@ -124,6 +116,6 @@ Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"
      
    </div>
 
-
+<script src="Disable.js"></script>
 </body>
 </html>

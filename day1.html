@@ -8,13 +8,14 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
         <style>
           .table{color:black;
   background-color:beige;
   margin-left: 0%;
 }     
           body{
-            background-color:lightsteelblue;
+            background-color:cornflowerblue;
           }
           
         .myDiv {
@@ -27,7 +28,7 @@
             background-image: linear-gradient(to right,rgb(31, 47, 192) ,purple);
         
           }
-          .button {
+          #login-button {
             width: 250px;
             height: 50px;
             background-image: linear-gradient(to right,rgb(31, 47, 192) ,purple);
@@ -59,13 +60,13 @@ color: white;}
           </style>
     </head>
 <body>
- 
-
-<script>
-
-function myFunction() {
-    alert("Input field lost focus.");
+  <script src="Disable.js"></script>
+ <script>
+ function myFunction() {
+   document.getElementById("message1").innerHTML = "**Out from Username";
+   document.getElementById("message2").innerHTML = "**Out from Password";
 }
+
 
 function InvalidMsg(textbox) {
   
@@ -82,7 +83,13 @@ function InvalidMsg(textbox) {
   return true;
 }
 
+
+// Call checkFields() function whenever the input fields change
+document.getElementById('email').addEventListener('input', checkFields);
+document.getElementById('password').addEventListener('input', checkFields);
+
 </script>
+
 <div class="table">
   <table style="width:80%">
       <tr>
@@ -106,19 +113,21 @@ function InvalidMsg(textbox) {
 
 <form  style="text-align:center;">
   
-
-   <!-- <input type="email" id="email" name="email" placeholder="Email Addess"class="id1"​ 
-    onfocusout="myFunction()"required><br><br>-->
     
             <input id="email" oninvalid="InvalidMsg(this);" 
                    oninput="InvalidMsg(this);" name="email" placeholder="Username or Email"
-                   type="email" required="required" class="id1"><br><br>
-                   
-    <input type="password" id="pwd" name="pwd"placeholder="Password"class="id1"><br><br>
+                   type="email" required="required" class="id1" onfocusout="myFunction()"><br><br>
+                   <span id = "message1" style="color:red"> </span>
+  
+    <input type="password" id="password" name="password"placeholder="Password"class="id1" onfocusout="myFunction()"><br><br>
+    <span id = "message2" style="color:red"> </span>
+
   <input type="checkbox" id="checked" name="check" value="check">
   <label for="check"> Remember me </label>  <label for="forgot-password" class="col-6"></label>
+
     <a href="forgot.html" class="ml-6">Forgot Password?</a><br><br>
-  <button class="button">Sign in</button><br><br>
+  
+ <button  id="login-button" type="login-button">Sign in</button><br><br>
   <label for="Not a member" class="col-6">Not a member</label>  <a href="Sign up.html" class="ml-6">sign up now</a><br><br>
  
 </form> 
@@ -133,5 +142,6 @@ Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"
  </div>
 </div>
 </div>
+
 </body>
 </html>

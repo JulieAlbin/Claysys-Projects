@@ -51,6 +51,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.Regview = new System.Windows.Forms.DataGridView();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Regview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -147,7 +149,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(113, 36);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(52, 20);
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 9;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -169,7 +171,7 @@
             // 
             this.textBox4.Location = new System.Drawing.Point(113, 146);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(73, 20);
+            this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 12;
             // 
             // textBox5
@@ -191,26 +193,26 @@
             // 
             this.textBox7.Location = new System.Drawing.Point(387, 94);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
+            this.textBox7.Size = new System.Drawing.Size(103, 20);
             this.textBox7.TabIndex = 15;
             // 
             // textBox8
             // 
             this.textBox8.Location = new System.Drawing.Point(387, 122);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
+            this.textBox8.Size = new System.Drawing.Size(103, 20);
             this.textBox8.TabIndex = 16;
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(406, 150);
+            this.textBox9.Location = new System.Drawing.Point(390, 148);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
+            this.textBox9.Size = new System.Drawing.Size(103, 20);
             this.textBox9.TabIndex = 17;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(54, 186);
+            this.button1.Location = new System.Drawing.Point(49, 206);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 18;
@@ -220,7 +222,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(192, 195);
+            this.button2.Location = new System.Drawing.Point(193, 206);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 19;
@@ -230,7 +232,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(317, 194);
+            this.button3.Location = new System.Drawing.Point(322, 206);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 20;
@@ -240,7 +242,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(445, 194);
+            this.button4.Location = new System.Drawing.Point(445, 206);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 21;
@@ -258,12 +260,30 @@
             this.Regview.TabIndex = 22;
             this.Regview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Regview_CellContentClick);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(326, 174);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(85, 13);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Cofirm Password";
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(417, 171);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(100, 20);
+            this.textBox10.TabIndex = 24;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.Regview);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -325,6 +345,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridView Regview;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox10;
     }
 }
 
